@@ -17,4 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
+/**
+ * Espace d'administration
+ */
+Route::namespace('Admin')->prefix('admin')
+	 ->middleware('auth')->group(function () {
+	Route::resource('categories', 'CategoriesPostController');
+
+	Route::get('/posts/{type}', 'PostsController@index')->name('page.index');
+
+});
+
 Route::get('/home', 'HomeController@index')->name('home');

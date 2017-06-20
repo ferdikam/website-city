@@ -7,3 +7,26 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.topnav {
+	margin-bottom: 0px;
+}
+.subnav {
+	border-radius: 0px;
+	padding-top: 30px;
+	.navbar-nav {
+		width: 100%;
+		text-align: center;
+		li {
+			float: none;
+			display: inline-block;
+		}
+		.active {
+			a {
+				background-color: transparent;
+				border-bottom: 4px solid #3097D1;
+				color: #3097D1;
+			}
+		}
+	}
+}
